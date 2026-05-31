@@ -1,0 +1,26 @@
+﻿using InvestLens.Shared.Model.Entities;
+using InvestLens.Shared.Model.Enums;
+
+namespace InvestLens.Shared.DataAccess.Repositories;
+
+public interface ITransactionRepository : IBaseRepository
+{
+    Task<decimal> GetTotalCashIn();
+    Task<decimal> GetPortfolioTotalCashIn(int[] ids);
+
+    Task<decimal> GetTotalCashOut();
+    Task<decimal> GetPortfolioTotalCashOut(int[] ids);
+
+
+    Task<decimal> GetPortfolioCostTillDate(int id, DateTime date, List<Security> securityList, CancellationToken ct);
+    Task<decimal> GetPortfolioCurrentCost(int id, List<Security> securityList, CancellationToken ct);
+
+    Task<decimal> GetTotalDividends();
+    Task<decimal> GetPortfolioTotalDividends(int[] ids);
+
+    Task<decimal> GetTotalFeeTax();
+    Task<decimal> GetPortfolioTotalFeeTax(int[] ids);
+    Task<Dictionary<DateTime, decimal>> GetDynamicMetrics(PortfolioDynamicPeriod period, CancellationToken ct);
+    Task<Dictionary<DateTime, decimal>> GetPortfolioDynamicMetrics(PortfolioDynamicPeriod period, int[] ids, CancellationToken ct);
+    Task<DateTime> GetFirstDate(string secId);
+}

@@ -1,0 +1,24 @@
+﻿using InvestLens.Shared.Model.Enums;
+
+namespace InvestLens.Shared.Model;
+
+public class PortfolioDetails
+{
+    public PortfolioDetails(int id, string title, PortfolioType portfolioType)
+    {
+        Id = id;
+        Title = title;
+        PortfolioType = portfolioType;
+        Portfolios = [];
+        Securities = [];
+        Operations = [];
+    }
+
+    public int Id { get; }
+    public string Title { get; }
+    public string Description { get; init; } = string.Empty;
+    public PortfolioType PortfolioType { get; set; }
+    public List<int> Portfolios { get; }
+    public List<SecurityInfo> Securities { get; }
+    public List<SecurityOperation> Operations { get; }
+}
