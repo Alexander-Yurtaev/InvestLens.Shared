@@ -1,9 +1,8 @@
 ﻿using System.Globalization;
-using Xunit;
 using FluentAssertions;
-using InvestLens.Shared.Helpers; // Убедитесь, что пространство имен указано верно
+using InvestLens.Shared.Helpers;
 
-namespace InvestLens.Tests;
+namespace InvestLens.Shared.Tests;
 
 public class NumberHelpersTests
 {

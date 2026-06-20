@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\InvestLens.WPF\src\shared\src\InvestLens.Shared\InvestLens.Shared.csproj" />
+    <ProjectReference Include="..\src\InvestLens.Shared\InvestLens.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
