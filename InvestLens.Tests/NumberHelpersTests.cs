@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using FluentAssertions;
 using InvestLens.Shared.Helpers;
+using Xunit;
 
 namespace InvestLens.Shared.Tests;
 
