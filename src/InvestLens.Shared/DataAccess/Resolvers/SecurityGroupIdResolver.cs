@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model;
+using InvestLens.Shared.Models;
 
 namespace InvestLens.Shared.DataAccess.Resolvers;
 
-public class SecurityGroupIdResolver : IMemberValueResolver<Model.MoexApi.Responses.Security, SecurityModel, string, int?>
+public class SecurityGroupIdResolver : IMemberValueResolver<Models.MoexApi.Responses.Security, SecurityModel, string, int?>
 {
     private readonly IMoexService _moexService;
 
@@ -13,7 +13,7 @@ public class SecurityGroupIdResolver : IMemberValueResolver<Model.MoexApi.Respon
         _moexService = moexService;
     }
 
-    public int? Resolve(Model.MoexApi.Responses.Security source, SecurityModel destination, string sourceMember, int? destMember, ResolutionContext context)
+    public int? Resolve(Models.MoexApi.Responses.Security source, SecurityModel destination, string sourceMember, int? destMember, ResolutionContext context)
     {
         var group = _moexService.MoexDictionaries.SecurityGroups
             .FirstOrDefault(s => s.Name == sourceMember);

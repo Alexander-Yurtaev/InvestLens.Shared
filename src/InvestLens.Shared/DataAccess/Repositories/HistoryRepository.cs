@@ -1,5 +1,5 @@
 ﻿using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model.Services;
+using InvestLens.Shared.Models.Services;
 using InvestLens.Shared.Models.Entities.Moex;
 using Microsoft.EntityFrameworkCore;
 

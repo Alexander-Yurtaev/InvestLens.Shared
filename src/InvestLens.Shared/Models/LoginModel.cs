@@ -1,6 +1,6 @@
 ﻿using System.Security;
 
-namespace InvestLens.Shared.Model;
+namespace InvestLens.Shared.Models;
 
 public class LoginModel
 {

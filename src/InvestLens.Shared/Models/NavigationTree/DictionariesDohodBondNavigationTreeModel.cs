@@ -1,6 +1,6 @@
-﻿using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.NavigationTree;
+namespace InvestLens.Shared.Models.NavigationTree;
 
 public class DictionariesDohodBondNavigationTreeModel(string icon, string title, PeriodType periodType) 
     : BaseNavigationTreeModel(icon, title)

@@ -1,7 +1,6 @@
-﻿using InvestLens.Shared.Model.MoexApi.Settings;
-using System.Diagnostics.CodeAnalysis;
+﻿using InvestLens.Shared.Models.MoexApi.Settings;
 
-namespace InvestLens.Shared.Model;
+namespace InvestLens.Shared.Models;
 
 public class SecurityModel : BaseModel
 {

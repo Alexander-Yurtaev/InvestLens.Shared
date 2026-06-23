@@ -1,6 +1,4 @@
-﻿using InvestLens.Shared.Model.Entities.Settings;
-
-namespace InvestLens.Shared.Model.MoexApi.Settings;
+﻿namespace InvestLens.Shared.Models.MoexApi.Settings;
 
 public class BoardModel : BaseModel
 {

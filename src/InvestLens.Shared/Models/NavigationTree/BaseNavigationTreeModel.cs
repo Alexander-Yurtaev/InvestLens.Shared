@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.NavigationTree;
+﻿namespace InvestLens.Shared.Models.NavigationTree;
 
 public abstract class BaseNavigationTreeModel (string icon, string title)
 {

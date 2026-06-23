@@ -1,7 +1,7 @@
-﻿using InvestLens.Shared.Model.Crud.Portfolio;
-using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Crud.Portfolio;
+using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.Crud.Transaction;
+namespace InvestLens.Shared.Models.Crud.Transaction;
 
 public class TransactionModel
 {

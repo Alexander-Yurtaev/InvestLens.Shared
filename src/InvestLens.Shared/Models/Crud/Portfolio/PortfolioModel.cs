@@ -1,7 +1,7 @@
-﻿using InvestLens.Shared.Model.Crud.User;
-using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Crud.User;
+using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.Crud.Portfolio;
+namespace InvestLens.Shared.Models.Crud.Portfolio;
 
 public class PortfolioModel : BaseModel
 {

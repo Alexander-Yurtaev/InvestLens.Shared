@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using FluentAssertions;
+﻿using FluentAssertions;
 using InvestLens.Shared.Helpers;
 using Xunit;
 
@@ -7,8 +6,6 @@ namespace InvestLens.Shared.Tests;
 
 public class NumberHelpersTests
 {
-    private readonly CultureInfo _invariantCulture = CultureInfo.InvariantCulture;
-
     [Fact]
     public void ConvertValueToString_IntegerValue_FormatsAsN0()
     {

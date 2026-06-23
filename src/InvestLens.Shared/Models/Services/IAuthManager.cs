@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.Services;
+﻿namespace InvestLens.Shared.Models.Services;
 
 public interface IAuthManager
 {

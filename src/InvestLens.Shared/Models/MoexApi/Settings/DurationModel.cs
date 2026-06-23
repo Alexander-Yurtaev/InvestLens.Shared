@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.MoexApi.Settings;
+﻿namespace InvestLens.Shared.Models.MoexApi.Settings;
 
 public class DurationModel : BaseModel
 {

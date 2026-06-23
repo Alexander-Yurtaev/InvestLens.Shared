@@ -1,8 +1,8 @@
-﻿using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.Crud.Portfolio;
+namespace InvestLens.Shared.Models.Crud.Portfolio;
 
-public class LookupModel : BaseModel
+public class LookupModel : Models.Crud.Portfolio.BaseModel
 {
     public LookupModel(int id, string name, PortfolioType portfolioType) : base(id, name, portfolioType)
     {

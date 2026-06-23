@@ -1,6 +1,6 @@
-﻿using InvestLens.Shared.Model.Crud.User;
+﻿using InvestLens.Shared.Models.Crud.User;
 
-namespace InvestLens.Shared.Model;
+namespace InvestLens.Shared.Models;
 
 public class UserInfo
 {

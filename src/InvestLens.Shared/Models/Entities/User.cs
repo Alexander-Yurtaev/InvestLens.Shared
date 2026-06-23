@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.Entities;
+﻿namespace InvestLens.Shared.Models.Entities;
 
 public class User : BaseEntity
 {

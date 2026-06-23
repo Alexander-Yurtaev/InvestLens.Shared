@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.Crud.User;
+﻿namespace InvestLens.Shared.Models.Crud.User;
 
 public class RegistrationModel : LoginModel
 {

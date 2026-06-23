@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace InvestLens.Shared.Model.Enums;
+namespace InvestLens.Shared.Models.Enums;
 
 public enum TransactionEvent
 {

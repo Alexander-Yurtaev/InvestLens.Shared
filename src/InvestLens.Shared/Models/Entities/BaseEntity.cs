@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InvestLens.Shared.Model.Entities;
+namespace InvestLens.Shared.Models.Entities;
 
 public abstract class BaseEntity
 {

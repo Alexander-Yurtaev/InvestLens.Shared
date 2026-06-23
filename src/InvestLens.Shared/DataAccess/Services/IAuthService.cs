@@ -1,5 +1,5 @@
-﻿using InvestLens.Shared.Model;
-using InvestLens.Shared.Model.Crud.User;
+﻿using InvestLens.Shared.Models;
+using InvestLens.Shared.Models.Crud.User;
 
 namespace InvestLens.Shared.DataAccess.Services;
 

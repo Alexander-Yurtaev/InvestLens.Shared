@@ -1,9 +1,6 @@
-﻿using InvestLens.Shared.Model.Entities;
-using InvestLens.Shared.Model.Entities.Settings;
-using InvestLens.Shared.Model.MoexApi.Responses.ResponseItems;
-using InvestLens.Shared.Models.Entities.Moex;
+﻿using InvestLens.Shared.Models.Entities;
+using InvestLens.Shared.Models.Entities.Settings;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace InvestLens.Shared.DataAccess;
 

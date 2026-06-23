@@ -1,6 +1,6 @@
-﻿using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.Entities;
+namespace InvestLens.Shared.Models.Entities;
 
 public class Transaction : BaseEntity
 {

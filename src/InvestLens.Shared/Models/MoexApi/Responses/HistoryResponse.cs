@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InvestLens.Shared.Model.MoexApi.Responses
+namespace InvestLens.Shared.Models.MoexApi.Responses
 {
     public class HistoryResponse
     {

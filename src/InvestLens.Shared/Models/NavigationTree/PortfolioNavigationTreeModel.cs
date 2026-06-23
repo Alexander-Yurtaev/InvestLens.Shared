@@ -1,6 +1,6 @@
-﻿using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.NavigationTree;
+namespace InvestLens.Shared.Models.NavigationTree;
 
 public class PortfolioNavigationTreeModel(int id, string icon, string title,  PortfolioType portfolioType) 
     : BaseNavigationTreeModel(icon, title)

@@ -1,4 +1,4 @@
-﻿using InvestLens.Shared.Model.Entities;
+﻿using InvestLens.Shared.Models.Entities;
 using System.Text.Json.Serialization;
 
 namespace InvestLens.Shared.Models.Entities.Moex;

@@ -1,4 +1,4 @@
-﻿using InvestLens.Shared.Model.Entities;
+﻿using InvestLens.Shared.Models.Entities;
 
 namespace InvestLens.Shared.DataAccess.Repositories
 {

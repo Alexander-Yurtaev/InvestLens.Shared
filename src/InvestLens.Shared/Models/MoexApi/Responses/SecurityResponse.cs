@@ -1,7 +1,7 @@
-﻿using InvestLens.Shared.Model.MoexApi.Responses.ResponseItems;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
+using InvestLens.Shared.Models.MoexApi.Responses.ResponseItems;
 
-namespace InvestLens.Shared.Model.MoexApi.Responses;
+namespace InvestLens.Shared.Models.MoexApi.Responses;
 
 public class SecuritiesResponse
 {

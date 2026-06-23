@@ -1,8 +1,7 @@
 ﻿using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model.Entities;
-using InvestLens.Shared.Model.Services;
+using InvestLens.Shared.Models.Entities;
+using InvestLens.Shared.Models.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace InvestLens.Shared.DataAccess.Repositories;
 

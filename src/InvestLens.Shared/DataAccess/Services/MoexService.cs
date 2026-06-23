@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using InvestLens.Shared.DataAccess.Repositories;
 using InvestLens.Shared.DataAccess.Repositories.Settings;
-using InvestLens.Shared.Model;
-using InvestLens.Shared.Model.Entities.Settings;
-using InvestLens.Shared.Model.Helpers;
-using InvestLens.Shared.Model.MoexApi.Responses;
-using InvestLens.Shared.Model.MoexApi.Responses.ResponseItems;
-using InvestLens.Shared.Model.MoexApi.Settings;
+using InvestLens.Shared.Models;
+using InvestLens.Shared.Models.Entities.Settings;
+using InvestLens.Shared.Models.MoexApi.Responses;
+using InvestLens.Shared.Models.MoexApi.Responses.ResponseItems;
+using InvestLens.Shared.Models.MoexApi.Settings;
 using System.Collections.Concurrent;
 using System.Net.Http.Json;
+using InvestLens.Shared.Helpers;
 
 namespace InvestLens.Shared.DataAccess.Services;
 
@@ -75,7 +75,7 @@ public class MoexService : IMoexService
 
     public MoexCache MoexDictionaries { get; }
 
-    public async Task LoadHistory(Model.Entities.Security security, CancellationToken ct)
+    public async Task LoadHistory(Models.Entities.Security security, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
 
@@ -97,7 +97,7 @@ public class MoexService : IMoexService
 
         var historyList = new List<Shared.Models.Entities.Moex.History>();
 
-        var currentHistoryCursor = new InvestLens.Shared.Model.MoexApi.HistoryCursor();
+        var currentHistoryCursor = new InvestLens.Shared.Models.MoexApi.HistoryCursor();
 
         var board = MoexDictionaries.Boards.FirstOrDefault(b => b.BoardId == security.MarketpriceBoardid);
 
@@ -123,7 +123,7 @@ public class MoexService : IMoexService
             if (response.History is not null)
             {
                 var history = MoexResponseHelper
-                    .GetModels<Model.MoexApi.Responses.ResponseItems.History, Shared.Models.Entities.Moex.History>(response.History)
+                    .GetModels<Models.MoexApi.Responses.ResponseItems.History, Shared.Models.Entities.Moex.History>(response.History)
                     .ToList();
 
                 historyList.AddRange(history);
@@ -132,7 +132,7 @@ public class MoexService : IMoexService
             if (response.HistoryCursor is not null)
             {
                 var historyCursor = MoexResponseHelper
-                    .GetModels<Model.MoexApi.Responses.ResponseItems.HistoryCursor, Model.MoexApi.HistoryCursor>(response.HistoryCursor)
+                    .GetModels<Models.MoexApi.Responses.ResponseItems.HistoryCursor, Models.MoexApi.HistoryCursor>(response.HistoryCursor)
                     .SingleOrDefault();
 
                 if (historyCursor is null)
@@ -244,7 +244,7 @@ public class MoexService : IMoexService
             MoexDictionaries.SecurityTypes.Clear();
             if (response.SecurityTypes is not null)
             {
-                var securityTypes = MoexResponseHelper.GetModels<SecurityTypes, Model.Entities.Settings.SecurityType>(response.SecurityTypes);
+                var securityTypes = MoexResponseHelper.GetModels<SecurityTypes, Models.Entities.Settings.SecurityType>(response.SecurityTypes);
                 foreach (var securityTypeEntity in securityTypes)
                 {
                     ct.ThrowIfCancellationRequested();
@@ -257,7 +257,7 @@ public class MoexService : IMoexService
             MoexDictionaries.SecurityGroups.Clear();
             if (response.SecurityGroups is not null)
             {
-                var securityGroups = MoexResponseHelper.GetModels<SecurityGroups, Model.Entities.Settings.SecurityGroup>(response.SecurityGroups);
+                var securityGroups = MoexResponseHelper.GetModels<SecurityGroups, Models.Entities.Settings.SecurityGroup>(response.SecurityGroups);
                 foreach (var securityGroupEntity in securityGroups)
                 {
                     ct.ThrowIfCancellationRequested();
@@ -270,7 +270,7 @@ public class MoexService : IMoexService
             MoexDictionaries.SecurityCollections.Clear();
             if (response.SecurityCollections is not null)
             {
-                var securityCollections = MoexResponseHelper.GetModels<SecurityCollections, Model.Entities.Settings.SecurityCollection>(response.SecurityCollections);
+                var securityCollections = MoexResponseHelper.GetModels<SecurityCollections, Models.Entities.Settings.SecurityCollection>(response.SecurityCollections);
                 foreach (var securityCollectionEntity in securityCollections)
                 {
                     ct.ThrowIfCancellationRequested();

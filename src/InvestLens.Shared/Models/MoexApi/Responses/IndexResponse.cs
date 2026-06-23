@@ -1,9 +1,7 @@
-﻿using InvestLens.Shared.Model.Entities.Settings;
-using InvestLens.Shared.Model.Enums;
-using InvestLens.Shared.Model.MoexApi.Responses.ResponseItems;
+﻿using InvestLens.Shared.Models.MoexApi.Responses.ResponseItems;
 using System.Text.Json.Serialization;
 
-namespace InvestLens.Shared.Model.MoexApi.Responses;
+namespace InvestLens.Shared.Models.MoexApi.Responses;
 
 public class IndexResponse
 {

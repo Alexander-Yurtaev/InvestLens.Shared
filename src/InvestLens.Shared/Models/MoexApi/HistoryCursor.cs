@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InvestLens.Shared.Model.MoexApi;
+namespace InvestLens.Shared.Models.MoexApi;
 
 public class HistoryCursor
 {

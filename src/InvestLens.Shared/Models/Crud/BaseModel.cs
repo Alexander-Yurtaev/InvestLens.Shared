@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.Crud;
+﻿namespace InvestLens.Shared.Models.Crud;
 
 public abstract class BaseModel
 {

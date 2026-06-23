@@ -1,11 +1,11 @@
-﻿using InvestLens.Shared.Model.Crud.Transaction;
-using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Enums;
+using InvestLens.Shared.Models.Crud.Transaction;
 
-namespace InvestLens.Shared.Model.Helpers;
+namespace InvestLens.Shared.Helpers;
 
 public static class TransactionEventHelper
 {
-    public static string EventToString(object value)
+    public static string EventToString(object? value)
     {
         if (value is null) return "ОШИБКА";
         if (Enum.TryParse<TransactionEvent>(value.ToString(), true, out var transactionEvent))

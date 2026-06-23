@@ -1,5 +1,5 @@
-﻿using InvestLens.Shared.Model.Entities;
-using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Entities;
+using InvestLens.Shared.Models.Enums;
 
 namespace InvestLens.Shared.DataAccess.Repositories;
 

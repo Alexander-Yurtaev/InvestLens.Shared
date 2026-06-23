@@ -1,4 +1,4 @@
-﻿namespace InvestLens.Shared.Model.Enums;
+﻿namespace InvestLens.Shared.Models.Enums;
 
 public enum PortfolioDynamicPeriod
 {

@@ -1,8 +1,8 @@
-﻿using InvestLens.Shared.Model.Enums;
+﻿using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model.Crud.Portfolio;
+namespace InvestLens.Shared.Models.Crud.Portfolio;
 
-public class UpdateModel : InvestLens.Shared.Model.Crud.Portfolio.BaseModel
+public class UpdateModel : Models.Crud.Portfolio.BaseModel
 {
     public UpdateModel() : base("", PortfolioType.Invest)
     {

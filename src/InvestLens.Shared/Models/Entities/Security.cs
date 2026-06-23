@@ -1,8 +1,6 @@
-﻿using InvestLens.Shared.Model.Entities.Settings;
-using InvestLens.Shared.Model.Enums;
-using System.Diagnostics.CodeAnalysis;
+﻿using InvestLens.Shared.Models.Entities.Settings;
 
-namespace InvestLens.Shared.Model.Entities;
+namespace InvestLens.Shared.Models.Entities;
 
 public class Security : BaseEntity
 {

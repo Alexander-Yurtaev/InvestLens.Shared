@@ -1,8 +1,8 @@
-﻿using InvestLens.Shared.Model.Crud.Transaction;
-using InvestLens.Shared.Model.Enums;
-using InvestLens.Shared.Model.Helpers;
+﻿using InvestLens.Shared.Helpers;
+using InvestLens.Shared.Models.Crud.Transaction;
+using InvestLens.Shared.Models.Enums;
 
-namespace InvestLens.Shared.Model;
+namespace InvestLens.Shared.Models;
 
 public class ActivityItem
 {

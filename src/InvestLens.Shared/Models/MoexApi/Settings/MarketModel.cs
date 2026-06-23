@@ -1,7 +1,4 @@
-﻿using InvestLens.Shared.Model.Entities.Settings;
-using System.Text.Json.Serialization;
-
-namespace InvestLens.Shared.Model.MoexApi.Settings;
+﻿namespace InvestLens.Shared.Models.MoexApi.Settings;
 
 public class MarketModel : BaseModel
 {

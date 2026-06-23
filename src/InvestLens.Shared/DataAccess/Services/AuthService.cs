@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using InvestLens.Shared.DataAccess.Repositories;
-using InvestLens.Shared.Model;
-using InvestLens.Shared.Model.Crud.User;
-using InvestLens.Shared.Model.Entities;
 using InvestLens.Shared.Helpers;
+using InvestLens.Shared.Models;
+using InvestLens.Shared.Models.Crud.User;
+using InvestLens.Shared.Models.Entities;
 
 namespace InvestLens.Shared.DataAccess.Services;
 

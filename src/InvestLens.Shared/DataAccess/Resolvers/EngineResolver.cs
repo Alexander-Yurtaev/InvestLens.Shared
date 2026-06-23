@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model;
-using InvestLens.Shared.Model.MoexApi.Settings;
+using InvestLens.Shared.Models.MoexApi.Settings;
 
 namespace InvestLens.Shared.DataAccess.Resolvers;
 
-public class EngineResolver : IMemberValueResolver<Model.Entities.Settings.Board, BoardModel, int, EngineModel?>
+public class EngineResolver : IMemberValueResolver<Models.Entities.Settings.Board, BoardModel, int, EngineModel?>
 {
     private readonly IMoexService _moexService;
 
@@ -14,7 +13,7 @@ public class EngineResolver : IMemberValueResolver<Model.Entities.Settings.Board
         _moexService = moexService;
     }
 
-    public EngineModel? Resolve(Model.Entities.Settings.Board source, BoardModel destination, int engineId, EngineModel? destMember, ResolutionContext context)
+    public EngineModel? Resolve(Models.Entities.Settings.Board source, BoardModel destination, int engineId, EngineModel? destMember, ResolutionContext context)
     {
         return _moexService.MoexDictionaries.Engines
             .FirstOrDefault(s => s.Id == engineId);

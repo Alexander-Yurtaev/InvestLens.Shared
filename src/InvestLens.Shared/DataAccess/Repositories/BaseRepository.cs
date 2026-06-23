@@ -1,9 +1,7 @@
 ﻿using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model.Entities;
-using InvestLens.Shared.Model.Entities.Settings;
-using InvestLens.Shared.Model.Services;
+using InvestLens.Shared.Models.Entities;
+using InvestLens.Shared.Models.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace InvestLens.Shared.DataAccess.Repositories;
 
@@ -63,6 +61,6 @@ public abstract class BaseRepository : IBaseRepository
             throw new InvalidOperationException($"{this.GetType().Name}: Сущность не найдена.");
         }
 
-        DatabaseService.DataContext.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+        DatabaseService.DataContext.Entry(entity).State = EntityState.Deleted;
     }
 }

@@ -1,7 +1,7 @@
 ﻿using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model.Entities;
-using InvestLens.Shared.Model.Enums;
-using InvestLens.Shared.Model.Services;
+using InvestLens.Shared.Models.Entities;
+using InvestLens.Shared.Models.Enums;
+using InvestLens.Shared.Models.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
     public async Task<decimal> GetTotalCashIn()
     {
         var total = await DatabaseService.DataContext.Transactions
-            .Where(t => t.Event == Model.Enums.TransactionEvent.Cash_In)
+            .Where(t => t.Event == Models.Enums.TransactionEvent.Cash_In)
             .SumAsync(t => t.Quantity);
 
         return total;
@@ -32,7 +32,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
     {
         var total = await DatabaseService.DataContext.Transactions
             .Where(t => ids.Contains(t.PortfolioId) &&
-                        (t.Event == Model.Enums.TransactionEvent.Cash_In))
+                        (t.Event == Models.Enums.TransactionEvent.Cash_In))
             .SumAsync(t => t.Quantity);
 
         return total;
@@ -43,7 +43,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
     public async Task<decimal> GetTotalCashOut()
     {
         var total = await DatabaseService.DataContext.Transactions
-            .Where(t => t.Event == Model.Enums.TransactionEvent.Cash_Out)
+            .Where(t => t.Event == Models.Enums.TransactionEvent.Cash_Out)
             .SumAsync(t => t.Quantity);
 
         return total;
@@ -53,7 +53,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
     {
         var total = await DatabaseService.DataContext.Transactions
             .Where(t => ids.Contains(t.PortfolioId) &&
-                        (t.Event == Model.Enums.TransactionEvent.Cash_Out))
+                        (t.Event == Models.Enums.TransactionEvent.Cash_Out))
             .SumAsync(t => t.Quantity);
 
         return total;
@@ -125,7 +125,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
     public async Task<decimal> GetTotalDividends()
     {
         var total = await DatabaseService.DataContext.Transactions
-            .Where(t => t.Event == Model.Enums.TransactionEvent.Dividend)
+            .Where(t => t.Event == Models.Enums.TransactionEvent.Dividend)
             .SumAsync(t => t.Quantity);
 
         return total;
@@ -135,7 +135,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
     {
         var total = await DatabaseService.DataContext.Transactions
             .Where(t => ids.Contains(t.PortfolioId) &&
-                        t.Event == Model.Enums.TransactionEvent.Dividend)
+                        t.Event == Models.Enums.TransactionEvent.Dividend)
             .SumAsync(t => t.Quantity);
 
         return total;
@@ -174,7 +174,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
                 ct.ThrowIfCancellationRequested();
 
                 var total = await DatabaseService.DataContext.Transactions
-                    .Where(t => t.Event == Model.Enums.TransactionEvent.Cash_In &&
+                    .Where(t => t.Event == Models.Enums.TransactionEvent.Cash_In &&
                                 t.Date <= item.Key)
                     .SumAsync(t => t.Quantity, ct);
                 result.Add(item.Key, total);
@@ -202,7 +202,7 @@ public class TransactionRepository : BaseRepository, ITransactionRepository
 
                 var total = await DatabaseService.DataContext.Transactions
                     .Where(t => ids.Contains(t.PortfolioId) &&
-                                t.Event == Model.Enums.TransactionEvent.Cash_In &&
+                                t.Event == Models.Enums.TransactionEvent.Cash_In &&
                                 t.Date <= item.Key)
                     .SumAsync(t => t.Quantity, ct);
                 result.Add(item.Key, total);

@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model.Entities;
-using InvestLens.Shared.Model.Enums;
-using InvestLens.Shared.Model.Services;
+using InvestLens.Shared.Models.Entities;
+using InvestLens.Shared.Models.Enums;
+using InvestLens.Shared.Models.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace InvestLens.Shared.DataAccess.Repositories;
 

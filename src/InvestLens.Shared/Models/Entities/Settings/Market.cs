@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InvestLens.Shared.Model.Entities.Settings;
+namespace InvestLens.Shared.Models.Entities.Settings;
 
 public class Market : BaseEntity
 {

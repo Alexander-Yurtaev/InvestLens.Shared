@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using InvestLens.Shared.DataAccess.Services;
-using InvestLens.Shared.Model;
-using InvestLens.Shared.Model.MoexApi.Settings;
+using InvestLens.Shared.Models.MoexApi.Settings;
 
 namespace InvestLens.Shared.DataAccess.Resolvers;
 
-public class MarketResolver : IMemberValueResolver<Model.Entities.Settings.Board, BoardModel, int, MarketModel?>
+public class MarketResolver : IMemberValueResolver<Models.Entities.Settings.Board, BoardModel, int, MarketModel?>
 {
     private readonly IMoexService _moexService;
 
@@ -14,7 +13,7 @@ public class MarketResolver : IMemberValueResolver<Model.Entities.Settings.Board
         _moexService = moexService;
     }
 
-    public MarketModel? Resolve(Model.Entities.Settings.Board source, BoardModel destination, int marketId, MarketModel? destMember, ResolutionContext context)
+    public MarketModel? Resolve(Models.Entities.Settings.Board source, BoardModel destination, int marketId, MarketModel? destMember, ResolutionContext context)
     {
         return _moexService.MoexDictionaries.Markets
             .FirstOrDefault(s => s.Id == marketId);

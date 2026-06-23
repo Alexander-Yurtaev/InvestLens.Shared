@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InvestLens.Shared.Model.MoexApi.Responses.ResponseItems
+namespace InvestLens.Shared.Models.MoexApi.Responses.ResponseItems
 {
     public abstract class BaseMoexResponseItem
     {

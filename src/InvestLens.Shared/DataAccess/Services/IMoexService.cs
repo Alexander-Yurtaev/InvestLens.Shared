@@ -1,5 +1,5 @@
-﻿using InvestLens.Shared.Model;
-using InvestLens.Shared.Model.Entities;
+﻿using InvestLens.Shared.Models;
+using InvestLens.Shared.Models.Entities;
 
 namespace InvestLens.Shared.DataAccess.Services;
 

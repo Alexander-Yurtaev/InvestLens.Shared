@@ -1,10 +1,10 @@
-﻿using InvestLens.Shared.Model.MoexApi.Responses.ResponseItems;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using InvestLens.Shared.Models.MoexApi.Responses.ResponseItems;
 
-namespace InvestLens.Shared.Model.Helpers;
+namespace InvestLens.Shared.Helpers;
 
 public static class MoexResponseHelper
 {
